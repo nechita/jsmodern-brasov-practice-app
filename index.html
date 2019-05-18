@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="./tailwind.css">
+  <link rel="stylesheet" type="text/css" href="./spinner.css">
+  <title>Currency Converter</title>
+</head>
+
+<body class="bg-blue-700 font-sans">
+  <div class="spinner">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+  </div>
+  <div class="app">
+    <div class="flex items-center justify-center  min-h-screen">
+      <div class="flex flex-1 flex-col items-center ">
+        <div class="flex-1 logo">
+          <img src="./images/conversion.svg" alt="" width="200px">
+        </div>
+        <div class="heading text-4xl text-white flex flex-1 flex-row items-start justify-start min-w-3/4 mx-auto">
+          <span class="from-currency-header mr-2 font-extrabold">EUR</span>
+          <span class="mr-2">&rarr;</span>
+          <span class="to-currency-header font-extrabold">GBP</span>
+        </div>
+        <div class="flex-1 p-12 bg-white rounded shadow b-1 b-black-100 min-w-3/4 mx-auto">
+          <form action="">
+            <div class="exchange-values flex items-center justify-between">
+              <div class="flex flex-col flex-1 mr-4">
+                <label class="text-gray-700 uppercase text-xs">Amount</label>
+                <input
+                  class="from-amount h-12 appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  type="text" placeholder="1">
+              </div>
+              <div class="flex flex-col flex-1">
+                <label class="text-gray-700 uppercase text-xs">Converted to</label>
+                <input
+                  class="to-amount h-12 appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  type="text" placeholder="1">
+              </div>
+            </div>
+            <div class="exchange-coins flex items-center justify-between mt-12">
+              <div class="flex flex-1 items-center justify-between mr-4">
+                <div class="flex flex-col flex-1 mr-4">
+                  <label class="text-gray-700 uppercase text-xs">From</label>
+                  <select
+                    class="select-from-currency block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                  </select>
+                </div>
+                <!-- <div class="mx-4 flex items-center p-4">
+                  <button type="button" class="switch-currency h-auto w-auto appearance-none rounded mt-2">
+                    <img src="./images/exchange.svg" alt="" height="24px" width="24px">
+                  </button>
+                </div> -->
+                <div class="flex flex-col flex-1">
+                  <label class="text-gray-700 uppercase text-xs">To</label>
+                  <select
+                    class="select-to-currency block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-col flex-1">
+                <p class="text-gray-700 uppercase text-xs">Exchange rate</p>
+                <div
+                  class="flex block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                  <div>1 <span class="from-currency-display">EUR</span></div>
+                  <div> = </div>
+                  <div><span class="exchange-rate-display">0.87140</span> <span class="to-currency-display">GBP</span></div>
+                </div>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
