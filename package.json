@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "serve": "cross-env NODE_ENV=development concurrently \"postcss tailwind.css -o dist/tailwind.css --watch\"  \"live-server .\"",
-    "dev": "cross-env NODE_ENV=development postcss tailwind.css -o dist/tailwind.css",
-    "prod": "cross-env NODE_ENV=production postcss tailwind.css -o dist/tailwind.css"
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "dev": "start",
+    "prod": "build"
   },
   "dependencies": {
     "autoprefixer": "^9.5.1",
@@ -15,5 +16,6 @@
     "cssnano": "^4.1.10",
     "live-server": "^1.2.1",
     "postcss-cli": "^6.1.2"
-  }
+  },
+  "browserslist": "> 0.25%"
 }
