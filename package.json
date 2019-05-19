@@ -2,8 +2,8 @@
   "scripts": {
     "start": "parcel index.html",
     "clean": "rimraf dist",
-    "prod": "parcel build index.html",
-    "build": "run-s clean prod"
+    "build": "parcel build index.html",
+    "prod": "run-s clean build"
   },
   "dependencies": {
     "autoprefixer": "^9.5.1",
